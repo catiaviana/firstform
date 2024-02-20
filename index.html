@@ -13,25 +13,44 @@
   <main>
     <div class="container">
      <h1 class="title">Can you answer this questions?</h1>
-
-        <form action>
-            <label for="fname">Tell us you first name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name...">
-
-            <label for="lname">And your last one?</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your laste name...">
-
-            <label for="country">Country</label>
-            <select id="country" name="country">
-                <option value="yourcountry">Select your country</option>
-                <option value="portugal">Portugal</option>
-                <option value="spain">Spain</option>
-                <option value="france">France</option>
-            </select>
-            <input type="button" value="Cancel">
-            <input type="submit" value="Submit">
-        </form>
     </div>
+    <form class="info">
+    <ul>
+      <li><label for="fname">Your first name</label></li>
+      <li><input type="text" id="fname" name="firstname" placeholder="Your first name..."></li>
+      <li><label for="lname">Your last one?</label></li>
+      <li><input type="text" id="lname" name="lastname" placeholder="Your laste name..."></li>
+      <!--gender com selecao de pontos -->
+      <li><h3>Gender</h3></li>
+      <li><label class="gender">Female<input type="radio" checked="checked" name="radio">
+      <span class="checkmark"></span></lable></li>
+      <li><label class="gender">Male<input type="radio" checked="checked" name="radio">
+      <span class="checkmark"></span></label></li>
+      <li><label for="gender">Other</label>
+      <input type="text" id="gender" name="gender" placeholder="Which one?"></li>
+      <!--data de nascimento -->
+      <label for="birth-date">Date of Birth</label>
+      <input type="date" id="birth-date" name="birth-date">
+      <!--phone number-->
+      <label for="telephone">Telephone Number:</label>
+        <input type="tel" id="telephone" name="telephone" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" placeholder="123456789" required>
+      <li><label for="email">Email</label></li>
+      <li><input type="email"  id="email" name="email" placeholder="Your email..."></li>
+      <li><label for="country">Country</label></li>
+      <li><select id="country" name="country">
+        <option value="yourcountry">Select your country</option>
+        <option value="portugal">Portugal</option>
+        <option value="spain">Spain</option>
+        <option value="france">France</option>
+      </select></li>
+
+      <!---->
+    </ul>
+    </form>
+    <form class="bts">
+      <input type="button" value="Cancel">
+      <input type="submit" value="Submit">
+    </form>
   </main>  
 </body>
 </html>
