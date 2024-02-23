@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Form</title>
-    <link rel="icon" type="image/x-icon" href="/assets/icon.jpg">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Form</title>
+  <link rel="icon" type="image/x-icon" href="/assets/icon.jpg">
 </head>
 <body>
   <main>
@@ -15,42 +14,64 @@
      <h1 class="title">Can you answer this questions?</h1>
     </div>
     <form class="info">
-    <ul>
-      <li><label for="fname">Your first name</label></li>
-      <li><input type="text" id="fname" name="firstname" placeholder="Your first name..."></li>
-      <li><label for="lname">Your last one?</label></li>
-      <li><input type="text" id="lname" name="lastname" placeholder="Your laste name..."></li>
+    <fieldset class="names">
+      <label for="fname">First name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your first name" required>
+      <label for="lname">Last name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name" required>
+    </fieldset>
       <!--gender com selecao de pontos -->
-      <li><h3>Gender</h3></li>
-      <li><label class="gender">Female<input type="radio" checked="checked" name="radio">
-      <span class="checkmark"></span></lable></li>
-      <li><label class="gender">Male<input type="radio" checked="checked" name="radio">
-      <span class="checkmark"></span></label></li>
-      <li><label for="gender">Other</label>
-      <input type="text" id="gender" name="gender" placeholder="Which one?"></li>
-      <!--data de nascimento -->
+    <fieldset class="">
+      <legend>Gender</legend>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+      <br>        
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <br>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label>
+      <input type="text" id="otherText" name="otherText" placeholder="Please specify" style="display: none;">
+    </fieldset>
+    <!--data de nascimento -->
+    <fieldset class="">
       <label for="birth-date">Date of Birth</label>
-      <input type="date" id="birth-date" name="birth-date">
-      <!--phone number-->
+      <input type="date" id="birth-date" name="birth-date" required>
+    </fieldset>
+    <!--phone number-->
+    <fieldset class="">
       <label for="telephone">Telephone Number:</label>
-        <input type="tel" id="telephone" name="telephone" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" placeholder="123456789" required>
-      <li><label for="email">Email</label></li>
-      <li><input type="email"  id="email" name="email" placeholder="Your email..."></li>
-      <li><label for="country">Country</label></li>
-      <li><select id="country" name="country">
+      <input type="tel" id="telephone" name="telephone" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" placeholder="912345678" required>
+    </fieldset>
+    <!--email-->
+    <fieldset class="">
+      <label for="email">Email</label>
+      <input type="email"  id="email" name="email" placeholder="Your email" required>
+    </fieldset>
+    <!--adress-->
+    <fieldset class="">
+      <label for="adress">Adress</label>
+      <input type="text" id="adress" name="adress" placeholder="Street Adress" required>
+      <input type="text" id="city" name="city" placeholder="City" required>
+      <input type="text" id="region" name="region" placeholder="Region">
+    </fieldset>
+    <!--country-->
+    <fieldset class="">
+      <label for="country">Country</label>
+      <select id="country" name="country" required>
         <option value="yourcountry">Select your country</option>
         <option value="portugal">Portugal</option>
         <option value="spain">Spain</option>
         <option value="france">France</option>
-      </select></li>
-
-      <!---->
-    </ul>
-    </form>
-    <form class="bts">
+      </select>
+    </fieldset>
+    <!--buttons-->
+    <fieldset class="buttons">
       <input type="button" value="Cancel">
       <input type="submit" value="Submit">
+    </fieldset>
     </form>
-  </main>  
+  </main> 
+  <script src="script.js"></script> <!--tem que estar aqui porque no header não dava tempo p carregar a página e ver a ação do js-->
 </body>
 </html>

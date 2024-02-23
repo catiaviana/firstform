@@ -1,58 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-*{
-  font-family: "IBM Plex Serif", serif;
-  background-color:darksalmon;
+/*Reset CSS*/
+*{ 
   margin: 0;
   padding: 0;
 }
-
-.container{
-  padding: 0% 30%;
-    
+/*Fonte Padrão*/
+body{
+  font-family: "IBM Plex Serif", serif;
+  background-color:darksalmon;
 }
-.title{
+.container {
+  margin: 0 auto; /* Aplica margem automática nas laterais */
+  max-width: 800px; /* Defina uma largura máxima para o contêiner */
+  padding: 0 30px;
   color: white;
-  font-size: 3rem;
-}
-
-form {
-  padding-left: 30%;
-  padding-top: 5%;
-
-}
-
-ul{
   font-size: 1.5rem;
-  list-style-type: none;
 }
-
-input[type="text"]{
-  width: 50%;
+/*Formulário*/
+.info {
+  margin: 0 auto; /* Aplica margem automática nas laterais */
+  max-width: 800px; /* Defina uma largura máxima para o contêiner */
+  padding: 0 30px;
+  font-size: 1.5rem;
+}
+fieldset{
+  border: none;
+  margin-bottom: 10px; /* Espaçamento entre os fieldsets */
+}
+.names{
+  display: flex; /* Ativa o layout flexível */
+  justify-content: space-between; /* Distribui os itens igualmente na linha */
+}
+/* Campos de entrada */
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+select[id="country"] {
+  width: 100%; /* Preencher a largura do campo pai */
   height: 40px;
   background-color: white;
   border-radius: 7px;
-}
-
-input[type="button"]{
-  text-transform: uppercase;
-  background-color: white;
-  color:indianred;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 10px;
-  border: 3px solid indianred;
-}
-
-select{
-  background-color: white;
   font-size: 1rem;
 }
-
-input[type="submit"]{
+/*todos botões*/
+.buttons{
+  padding-top: 50px;
+}
+/* Botão */
+input[type="button"],
+input[type="submit"] {
   text-transform: uppercase;
   background-color: white;
-  color:indianred;
+  color: indianred;
   padding: 10px 20px;
   font-size: 1rem;
   border-radius: 10px;
