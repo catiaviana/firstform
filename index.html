@@ -11,67 +11,71 @@
 <body>
   <main>
     <div class="container">
-     <h1 class="title">Can you answer this questions?</h1>
+      <h1 class="title">Can you answer these questions?</h1>
     </div>
-    <form class="info">
-    <fieldset class="names">
-      <label for="fname">First name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your first name" required>
-      <label for="lname">Last name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name" required>
-    </fieldset>
-      <!--gender com selecao de pontos -->
-    <fieldset class="">
-      <legend>Gender</legend>
-      <input type="radio" id="female" name="gender" value="female">
-      <label for="female">Female</label>
-      <br>        
-      <input type="radio" id="male" name="gender" value="male">
-      <label for="male">Male</label>
-      <br>
-      <input type="radio" id="other" name="gender" value="other">
-      <label for="other">Other</label>
-      <input type="text" id="otherText" name="otherText" placeholder="Please specify" style="display: none;">
-    </fieldset>
-    <!--data de nascimento -->
-    <fieldset class="">
-      <label for="birth-date">Date of Birth</label>
-      <input type="date" id="birth-date" name="birth-date" required>
-    </fieldset>
-    <!--phone number-->
-    <fieldset class="">
-      <label for="telephone">Telephone Number:</label>
-      <input type="tel" id="telephone" name="telephone" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" placeholder="912345678" required>
-    </fieldset>
-    <!--email-->
-    <fieldset class="">
-      <label for="email">Email</label>
-      <input type="email"  id="email" name="email" placeholder="Your email" required>
-    </fieldset>
-    <!--adress-->
-    <fieldset class="">
-      <label for="adress">Adress</label>
-      <input type="text" id="adress" name="adress" placeholder="Street Adress" required>
-      <input type="text" id="city" name="city" placeholder="City" required>
-      <input type="text" id="region" name="region" placeholder="Region">
-    </fieldset>
-    <!--country-->
-    <fieldset class="">
-      <label for="country">Country</label>
-      <select id="country" name="country" required>
-        <option value="yourcountry">Select your country</option>
-        <option value="portugal">Portugal</option>
-        <option value="spain">Spain</option>
-        <option value="france">France</option>
-      </select>
-    </fieldset>
-    <!--buttons-->
-    <fieldset class="buttons">
-      <input type="button" value="Cancel">
-      <input type="submit" value="Submit">
-    </fieldset>
+    <form 
+      action=""
+      method="POST" 
+      data-form
+      class="info">
+      <fieldset class="names">
+        <label for="fname">First name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your first name" required>
+        <label for="lname">Last name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name" required>
+      </fieldset>
+      <!-- Gender with radio buttons -->
+      <fieldset class="">
+        <legend>Gender</legend>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br>        
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        <input type="text" id="otherText" name="otherText" placeholder="Please specify" style="display: none;">
+      </fieldset>
+      <!-- Date of Birth -->
+      <fieldset class="">
+        <label for="birth-date">Date of Birth</label>
+        <input type="date" id="birth-date" name="birth-date" required>
+      </fieldset>
+      <!-- Phone number -->
+      <fieldset class="">
+        <label for="telephone">Telephone Number:</label>
+        <input type="tel" id="telephone" name="telephone" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" placeholder="912345678" required>
+      </fieldset>
+      <!-- Email -->
+      <fieldset class="">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+      </fieldset>
+      <!-- Address -->
+      <fieldset class="">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" placeholder="Street Address" required>
+        <input type="text" id="city" name="city" placeholder="City" required>
+        <input type="text" id="region" name="region" placeholder="Region">
+      </fieldset>
+      <!-- Country -->
+      <fieldset class="">
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="yourcountry">Select your country</option>
+          <option value="portugal">Portugal</option>
+          <option value="spain">Spain</option>
+          <option value="france">France</option>
+        </select>
+      </fieldset>
+      <!-- Buttons -->
+      <fieldset class="buttons">
+        <input type="button" value="Cancel">
+        <input type="submit" data-button value="Submit">
+      </fieldset>
     </form>
   </main> 
-  <script src="script.js"></script> <!--tem que estar aqui porque no header não dava tempo p carregar a página e ver a ação do js-->
+  <script src="script.js"></script> <!-- Placing the script here ensures that all HTML elements are loaded before executing JavaScript -->
 </body>
 </html>
