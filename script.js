@@ -18,6 +18,32 @@ class FormSubmit {
     displayError() {
         this.form.innerHTML = this.settings.error;
     }
+
+    getFormObject() {
+        const formObject = {};
+        const fields = this.form.querySelectorAll("[name]");
+        fields.forEach((field) => {
+            formObject[field.getAttribute("name")] = field.value;
+        });
+        return formObject;
+    }
+
+    async sendForm() {
+      try {
+         await fetch(this.url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body:JSON.stringify(this.getFormObject()),
+         });
+         this.displaySuccess();
+        } catch (error) {
+            this.displayError();
+            throw new Error(error);
+        }
+    }
  /*
  The 'init()' method initializes the form submission handling; adds an event listener to the form button (specified in the settings) to trigger the 'displaySucess()' method when clicked
  */
